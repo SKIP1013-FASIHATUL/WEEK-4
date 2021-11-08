@@ -1,0 +1,22 @@
+package assignment;
+import java.util.Scanner;
+public class assignment1A {
+public static void main (String[] args) {
+	double rate,loan,month,total;
+	int year;
+	Scanner sc=new Scanner(System.in);
+	
+	System.out.print("Enter the yearly interest rate: ");
+	rate=sc.nextDouble();
+	System.out.print("Enter the number of years as an integer: ");
+	year=sc.nextInt();
+	System.out.print("Enter the loan amount: ");
+	loan=sc.nextDouble();
+	
+	 total=loan+((rate/100)*loan*year);
+	 month=total/(year*12);
+	System.out.println("The monthly payment is: "+month);
+	System.out.println("The total payment is: "+total);
+	
+}
+}
