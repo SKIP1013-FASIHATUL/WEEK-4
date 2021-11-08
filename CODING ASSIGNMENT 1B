@@ -1,0 +1,52 @@
+package assignment;
+import java.util.Scanner;
+public class assignment1B {
+public static void main(String[]args) {
+	double total1,total2,total3,price,total,p1,p2,p3,discount;
+	int items,q1,q2,q3;
+	
+	Scanner scan=new Scanner(System.in);
+	
+	System.out.print("Enter the number of items:");
+	items=scan.nextInt();
+	
+    System.out.print("Enter price of first item: RM ");
+    p1 = scan.nextDouble();
+    System.out.print("Enter quantity of first item: ");
+	q1 = scan.nextInt();
+	
+	
+	System.out.print("Enter price of second item: RM ");
+    p2 = scan.nextDouble();
+    System.out.print("Enter quantity of second item: ");
+	q2 = scan.nextInt();
+	
+	
+	System.out.print("Enter price of third item: RM ");
+    p3 = scan.nextDouble();
+    System.out.print("Enter quantity of third item: ");
+	q3 = scan.nextInt();
+
+	
+	total1 = p1 * q1;
+	total2 = p2 * q2;
+	total3 = p3 * q3;
+	
+	total = total1 + total2 + total3;
+	
+	if (total > 100)
+	{	
+		discount = 0.2 * total;
+	}    
+    else
+    {	
+    	discount = 0.1 * total;
+    }
+	
+		price = total - discount;
+	
+	System.out.println("total price:" +total);
+	System.out.println("discount received:" +discount);
+	System.out.println("price to be paid:" +price);
+	}
+}
